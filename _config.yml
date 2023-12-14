@@ -1,7 +1,2 @@
-# Configure GitHub Pages to serve files from the .well-known directory
-publish_dir: .
-# Make sure the .well-known directory is accessible at the root
-root: /
-# Set the MIME type for the apple-app-site-association file
-mime_types:
-  ".well-known/apple-app-site-association": "application/json"
+// _config.yml
+include: [".well-known"]
