@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "H7QFD3QTWD.com.evrifinance.evri"
+        ],
+        "components": [
+          {
+            "/": "/plaid/redirect/*",
+            "comment": "OAuth Redirect from Plaid"
+          }
+        ]
+      }
+    ]
+  }
+}
