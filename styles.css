@@ -4,7 +4,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0; /* Set a background color if needed */
+    background-color: black; /* Set background color to black */
+    color: white; /* Set text color to white */
     font-family: 'Days One', sans-serif; /* Use Days One font */
 }
 
