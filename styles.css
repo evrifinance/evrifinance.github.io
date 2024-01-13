@@ -4,9 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white */
-    font-family: 'Days One', sans-serif; /* Use Days One font */
+    background-color: black;
+    color: white;
+    font-family: 'Rubik Mono One', monospace;
 }
 
 .center-text {
@@ -14,5 +14,5 @@ body {
 }
 
 h1 {
-    font-size: 84px; /* Adjust the font size as needed */
+    font-size: 84px;
 }
