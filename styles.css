@@ -16,7 +16,6 @@ body {
 #app-name {
     font-size: 8vw; /* Adjust the size as needed */
     text-align: center;
-    width: 80%; /* Set the width to 80% of the parent container */
     margin: 0 auto;
 }
 
