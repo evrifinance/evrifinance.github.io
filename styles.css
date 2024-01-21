@@ -1,4 +1,5 @@
 body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,12 +17,11 @@ body {
 #app-name {
     font-size: 8vw; /* Adjust the size as needed */
     text-align: center;
-    margin: 0 auto;
 }
 
 #second-line {
     font-style: italic;
-    font-size: 1.5em; /* Adjust the size as needed */
+    font-size: 6vw; /* Adjust the size as needed */
     text-align: center;
 }
 
