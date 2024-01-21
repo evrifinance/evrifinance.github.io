@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: black; /* Default background color */
     color: white; /* Default text color */
+    flex-direction: column; /* Ensure all content is in a single column */
 }
 
 .green-text {
@@ -31,4 +32,12 @@ body {
 .day-mode {
     background-color: white;
     color: black;
+}
+
+#timestamps {
+    text-align: center;
+}
+
+#timestamps p {
+    margin: 0;
 }
