@@ -7,14 +7,22 @@
 }
 h1, h2, h3 {
     width: 100%;
-    color: white;
 }
 .green-text {
     color: green;
 }
 body.night-mode {
     background-color: black;
+    color: white;
 }
 body.day-mode {
     background-color: white;
+    color: black;
+}
+.timestamps {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    text-align: right;
 }
