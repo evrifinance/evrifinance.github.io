@@ -21,12 +21,12 @@ body {
 
 #second-line {
     font-style: italic;
-    font-size: 6vw; /* Adjust the size as needed */
+    font-size: 4vw; /* Adjust the size as needed */
     text-align: center;
 }
 
 #third-line {
-    font-size: 1em; /* Adjust the size as needed */
+    font-size: 1vw; /* Adjust the size as needed */
     text-align: center;
 }
 
