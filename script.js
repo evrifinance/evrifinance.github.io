@@ -1,31 +1,28 @@
-// Test Firestore
-var db = firebase.firestore();
+// Assuming you've already imported getAuth in your HTML
 
-db.collection("test").add({
-    first: "Test",
-    last: "Firebase",
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-})
-.then((docRef) => {
-    console.log("Firestore Test: Document written with ID: ", docRef.id);
-})
-.catch((error) => {
-    console.error("Firestore Test Error: ", error);
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Firebase Auth instance
+    const auth = getAuth();
+
+    // Test user's credentials
+    const testEmail = "testuser@example.com"; // Replace with your test user's email
+    const testPassword = "yourTestUserPassword"; // Replace with your test user's password
+
+    // Sign in function
+    function signIn() {
+        signInWithEmailAndPassword(auth, testEmail, testPassword)
+        .then((userCredential) => {
+            // Signed in 
+            var user = userCredential.user;
+            console.log("Auth Test: User signed in ", user.email);
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error("Auth Test Error: ", errorCode, errorMessage);
+        });
+    }
+
+    // Call the sign-in function to test
+    signIn();
 });
-
-// Test Firebase Authentication
-firebase.auth().signInWithEmailAndPassword("test@example.com", "password")
-.then((userCredential) => {
-    // Signed in 
-    var user = userCredential.user;
-    console.log("Auth Test: User signed in ", user.email);
-})
-.catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    console.error("Auth Test Error: ", errorCode, errorMessage);
-});
-
-// Test Firebase Analytics
-firebase.analytics().logEvent('test_event', {name: 'testName'});
-console.log("Analytics Test: Event logged");
