@@ -3,6 +3,12 @@
 <head>
     <title>Evri Finance</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+     <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+    <!-- Include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,12 +21,7 @@
         </section>
     </div>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-analytics.js";
-        import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
-        
+    <script>
         const firebaseConfig = {
         apiKey: "AIzaSyCbIz-jPc0GmQctyFJt1NMvB-gPp0Jl1Xk",
         authDomain: "evri-finance.firebaseapp.com",
