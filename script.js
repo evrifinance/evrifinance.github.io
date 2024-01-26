@@ -13,7 +13,7 @@ const firebaseConfig = {
 	storageBucket: "evri-finance.appspot.com",
 	messagingSenderId: "144557667607",
 	appId: "1:144557667607:web:8f731961adfccf181d3352",
-	measurementId: "G-HR31XF4PDX"};};
+	measurementId: "G-HR31XF4PDX"};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
