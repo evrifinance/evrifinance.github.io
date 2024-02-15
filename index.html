@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Evri Finance</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to Evri</h1>
-            <p>The Future of Finance</p>
-        </header>
-        <section id="main-content">
-            <!-- More content can be added here -->
-        </section>
-    </div>
-    
-    <script type="module" src="script.js"></script>
+    <header>
+        <h1>Finance Manager</h1>
+    </header>
+    <main>
+        <button id="link-button">Connect Bank Account</button>
+    </main>
+    <script src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/plaid.js"></script>
 </body>
 </html>
