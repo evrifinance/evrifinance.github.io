@@ -16,14 +16,14 @@ body {
 
     /* Adjust card background color for dark mode */
     .card {
-        background-color: #222; /* Darker gray background color */
+        background-color: #252323; /* Darker gray background color */
     }
 }
 
 /* Header Styles */
 header {
     background-color: #343a40;
-    padding: 0.5rem 1rem 0; /* Adjust padding to remove bottom padding */
+    padding: 0.5rem 1rem; /* Adjust padding to remove bottom padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
