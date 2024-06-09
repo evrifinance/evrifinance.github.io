@@ -93,7 +93,7 @@ section h2 {
 }
 
 .card {
-    background-color: white;
+    color: inherit; /* Inherit text color from body */
     border: 1px solid #ddd;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -101,11 +101,19 @@ section h2 {
     padding: 1.5rem;
     width: calc(33% - 2rem);
     box-sizing: border-box;
+    background-color: white; /* Default background color for cards in light mode */
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+/* Dark Mode for Cards */
+@media (prefers-color-scheme: dark) {
+    .card {
+        background-color: #333; /* Background color for cards in dark mode */
+    }
 }
 
 footer {
