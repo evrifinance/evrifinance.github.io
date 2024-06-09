@@ -3,44 +3,35 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    color: black; /* Default text color for light mode */
+    background-color: #f8f9fa; /* Default background color for light mode */
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white; /* Text color for dark mode */
+        background-color: #343a40; /* Background color for dark mode */
+    }
+}
+
+/* Header Styles */
 header {
     background-color: #343a40;
     padding: 1rem 0;
     position: relative;
-}
-
-header nav ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    justify-content: flex-end;
 }
 
 .login-btn {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
     color: white;
     background-color: #007bff;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     text-decoration: none;
     font-weight: bold;
+    margin-right: 1rem;
 }
 
 .login-btn:hover {
@@ -56,7 +47,7 @@ header nav ul li a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: inherit; /* Inherit text color from body */
 }
 
 .hero h1 {
@@ -151,7 +142,7 @@ footer {
     align-items: center;
     height: 100vh;
     text-align: center;
-    background-color: #f8f9fa;
+    background-color: inherit; /* Inherit background color from body */
 }
 
 .login-container h1 {
