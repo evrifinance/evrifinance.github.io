@@ -18,10 +18,19 @@ body {
 /* Header Styles */
 header {
     background-color: #343a40;
-    padding: 1rem 0;
-    position: relative;
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+}
+
+nav {
+    padding: 0.5rem 1rem; /* Padding for the navigation links */
 }
 
 .login-btn {
@@ -31,114 +40,55 @@ header {
     border-radius: 0.25rem;
     text-decoration: none;
     font-weight: bold;
-    margin-right: 1rem;
 }
 
 .login-btn:hover {
     background-color: #0056b3;
 }
 
-/* Hero Section */
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: inherit; /* Inherit text color from body */
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin: 0.5rem 0 2rem;
-}
-
-.hero .btn {
-    background-color: #007bff;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.hero .btn:hover {
-    background-color: #0056b3;
-}
-
-/* Sections */
-section {
-    padding: 4rem 2rem;
+/* Subheadline Styles */
+.subheadline {
+    background-color: #f8f9fa;
+    padding: 2rem; /* Padding around the subheadline */
     text-align: center;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.service-cards {
+/* Card Section Styles */
+.card-section {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem; /* Padding around the card section */
 }
 
 .card {
-    color: inherit; /* Inherit text color from body */
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 1rem); /* Adjust width as needed for 3 cards per row */
+    background-color: #f8f9fa;
+    padding: 1rem;
     margin: 1rem;
-    padding: 1.5rem;
-    width: calc(33% - 2rem);
-    box-sizing: border-box;
-    background-color: white; /* Default background color for cards in light mode */
-}
-
-.card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Dark Mode for Cards */
-@media (prefers-color-scheme: dark) {
-    .card {
-        background-color: #333; /* Background color for cards in dark mode */
-    }
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
     text-align: center;
-    padding: 1rem 0;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.25rem;
-    }
-
-    .service-cards {
-        flex-direction: column;
+/* Media Query for Tablets and Desktops */
+@media (min-width: 768px) {
+    body {
+        overflow: hidden; /* Prevent scrolling on desktop and tablets */
     }
 
     .card {
-        width: calc(100% - 2rem);
+        width: calc(33.33% - 1rem); /* Adjust width as needed for 3 cards per row */
+    }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
+        overflow-y: auto; /* Allow vertical scrolling on mobile */
+    }
+
+    .card {
+        width: calc(100% - 1rem); /* Full width for mobile */
     }
 }
 
