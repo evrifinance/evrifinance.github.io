@@ -17,13 +17,6 @@ AppleID.auth.init({
     usePopup: true
 });
 
-// Handle Sign in with Apple callback
-AppleID.auth.signIn().then(function (response) {
-    const identityToken = response.authorization.id_token;
-    const userInfo = decodeIdentityToken(identityToken);
-    saveUserInfo(userInfo);
-});
-
 // Decode the Identity Token
 function decodeIdentityToken(identityToken) {
     const decodedToken = atob(identityToken.split('.')[1]);
@@ -49,6 +42,7 @@ function saveUserInfo(userInfo) {
         .publicCloudDatabase
         .saveRecord({
             recordType: 'UserInfo',
+            recordName: userInfo.email, // Use the email as the record name
             fields: {
                 name: { value: userInfo.name },
                 email: { value: userInfo.email }
@@ -61,3 +55,50 @@ function saveUserInfo(userInfo) {
             console.error('Error saving user information:', error);
         });
 }
+
+// Check if the user already exists
+function checkUserExists(email) {
+    return new Promise((resolve, reject) => {
+        const container = CloudKit.getDefaultContainer();
+        const query = {
+            recordType: 'UserInfo',
+            filterBy: [{
+                fieldName: 'email',
+                comparator: 'EQUALS',
+                fieldValue: { value: email }
+            }]
+        };
+
+        container
+            .publicCloudDatabase
+            .performQuery(query)
+            .then(response => {
+                resolve(response.records.length > 0);
+            })
+            .catch(error => {
+                reject(error);
+            });
+    });
+}
+
+// Handle Sign in with Apple callback
+AppleID.auth.signIn().then(function (response) {
+    const identityToken = response.authorization.id_token;
+    const userInfo = decodeIdentityToken(identityToken);
+
+    // Check if the user already exists
+    checkUserExists(userInfo.email)
+        .then(userExists => {
+            if (userExists) {
+                console.log('User already exists');
+                // Handle existing user
+            } else {
+                console.log('User does not exist');
+                // Save new user
+                saveUserInfo(userInfo);
+            }
+        })
+        .catch(error => {
+            console.error('Error checking user existence:', error);
+        });
+});
