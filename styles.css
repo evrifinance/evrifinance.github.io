@@ -118,7 +118,7 @@ nav {
 }
 
 /* Apple Sign in button style */
-.apple-btn {
+#appleid-signin {
     display: inline-block;
     background-color: black;
     color: white;
