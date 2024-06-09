@@ -8,3 +8,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+// Initialize Sign in with Apple button
+AppleID.auth.init({
+    clientId: 'com.evrifinance.app',
+    scope: 'email name',
+    redirectURI: 'https://www.evrifinance.com/home',
+    usePopup: true
+});
