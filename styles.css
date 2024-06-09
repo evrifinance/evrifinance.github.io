@@ -16,7 +16,7 @@ body {
 
     /* Adjust card background color for dark mode */
     .card {
-        background-color: #444;
+        background-color: #222; /* Darker gray background color */
     }
 }
 
