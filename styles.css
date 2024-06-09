@@ -67,6 +67,8 @@ nav {
     padding: 1rem;
     margin: 1rem;
     text-align: center;
+    border-radius: 0.5rem; /* Add rounded border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 /* Media Query for Mobile */
