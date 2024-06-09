@@ -68,25 +68,25 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 2rem; /* Padding around the card section */
+    padding: 0 2.5%; /* Padding only on the edges of the screen */
+    margin-top: 2rem; /* Adjust margin as needed */
 }
 
 .card {
-    flex: 0 0 calc(30% - 2rem); /* Adjust width to take up about 30% of the screen */
+    width: calc(30% - 1rem); /* Adjust width to take up about 30% of the screen */
+    height: calc(20vh - 2rem); /* Set card height to be five times taller */
     background-color: #f8f9fa;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
 }
 
-/* Media Query for Tablets and Desktops */
-@media (min-width: 768px) {
-    body {
-        overflow: hidden; /* Prevent scrolling on desktop and tablets */
-    }
-
+/* Media Query for Mobile */
+@media (max-width: 767px) {
     .card {
-        flex: 0 0 calc(30% - 2rem); /* Adjust width to take up about 30% of the screen */
+        width: calc(100% - 2rem); /* Full width for mobile */
+        height: calc(20vh - 2rem); /* Set card height to be five times taller */
+        margin: 1rem; /* Space between cards on mobile */
     }
 }
 
