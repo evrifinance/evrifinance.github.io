@@ -67,14 +67,14 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 0 25px; /* Padding only on the edges of the screen */
+    padding: 5px; /* Padding only on the edges of the screen */
 }
 
 .card {
-    width: calc(33.33% - 50px); /* Adjust width to include padding */
+    width: calc(33.33% - 10px); /* Adjust width to include padding */
     background-color: #f8f9fa;
     padding: 1rem;
-    margin: 25px; /* Space between cards */
+    margin: 5px; /* Space between cards */
     text-align: center;
 }
 
@@ -85,7 +85,7 @@ nav {
     }
 
     .card {
-        width: calc(33.33% - 50px); /* Adjust width to include padding */
+        width: calc(33.33% - 10px); /* Adjust width to include padding */
     }
 }
 
@@ -97,6 +97,6 @@ nav {
     }
 
     .card {
-        width: calc(100% - 50px); /* Full width for mobile */
+        width: calc(100% - 10px); /* Full width for mobile */
     }
 }
