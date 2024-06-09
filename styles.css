@@ -63,7 +63,7 @@ nav {
 .card {
     width: calc(30% - 1rem); /* Adjust width to take up about 30% of the screen */
     height: calc(50vh - 6rem); /* Set card height to be half of the screen height minus the header and subheadline heights */
-    background-color: #f8f9fa;
+    background-color: #252323;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
