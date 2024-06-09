@@ -74,7 +74,7 @@ nav {
 
 .card {
     width: calc(30% - 1rem); /* Adjust width to take up about 30% of the screen */
-    height: calc(20vh - 2rem); /* Set card height to be five times taller */
+    height: calc(50vh - 6rem); /* Set card height to be half of the screen height minus the header and subheadline heights */
     background-color: #f8f9fa;
     padding: 1rem;
     margin: 1rem;
@@ -85,7 +85,7 @@ nav {
 @media (max-width: 767px) {
     .card {
         width: calc(100% - 2rem); /* Full width for mobile */
-        height: calc(20vh - 2rem); /* Set card height to be five times taller */
+        height: calc(50vh - 6rem); /* Set card height to be half of the screen height minus the header and subheadline heights */
         margin: 1rem; /* Space between cards on mobile */
     }
 }
