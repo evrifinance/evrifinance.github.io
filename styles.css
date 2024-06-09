@@ -23,7 +23,7 @@ body {
 /* Header Styles */
 header {
     background-color: #343a40;
-    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    padding: 0.5rem 1rem 0; /* Adjust padding to remove bottom padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
