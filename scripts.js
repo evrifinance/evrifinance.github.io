@@ -37,7 +37,7 @@ function saveUserInfo(userInfo) {
         containers: [{
             containerIdentifier: 'iCloud.evrifinance.app',
             environment: 'development',
-            apiToken: '66a4da36c202ae0a0c11ff7768e46c59589e6d54174cdc93ed9dd00089c14d3d'
+            apiToken: '66a4da36c202ae0a0c11ff7768e46c59589e6d54174cdc93ed9dd00089c14d3d' // Replace 'YOUR_API_KEY' with your actual API key
         }]
     });
 
