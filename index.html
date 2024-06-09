@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evri Finance</title>
+    <title>Login | Evri Finance</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Sign in with Apple JS framework -->
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="logo">Evri Finance</h1>
-        <nav>
-            <a href="login" class="login-btn">Login</a>
-        </nav>
-    </header>
-    <section class="card-section">
-        <div class="card">Card 1</div>
-        <div class="card">Card 2</div>
-        <div class="card">Card 3</div>
-        <div class="card">Card 4</div>
-        <div class="card">Card 5</div>
-        <div class="card">Card 6</div>
-    </section>
+    <div class="login-container">
+        <h1>Evri Finance</h1>
+        <!-- Add Sign in with Apple button markup -->
+        <div id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
