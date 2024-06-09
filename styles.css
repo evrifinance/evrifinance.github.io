@@ -58,9 +58,11 @@ nav {
 
 /* Subheadline Styles */
 .subheadline {
-    padding: 2rem; /* Padding around the subheadline */
+    padding: 1rem; /* Reduce padding for the subheadline */
     text-align: center;
     color: black; /* Text color for light mode */
+    height: calc(33.33vh - 6rem); /* Set height to be one-third of the screen height minus the header and card section heights */
+    overflow-y: auto; /* Allow vertical scrolling if content exceeds the height */
 }
 
 /* Card Section Styles */
