@@ -85,3 +85,34 @@ nav {
         margin: 1rem; /* Space between cards on mobile */
     }
 }
+
+/* Login Page Styles */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: inherit; /* Inherit background color from body */
+}
+
+.login-container h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.apple-btn {
+    background-color: black;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.apple-btn:hover {
+    background-color: #333;
+}
