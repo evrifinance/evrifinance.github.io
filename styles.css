@@ -10,6 +10,7 @@ body {
 header {
     background-color: #343a40;
     padding: 1rem 0;
+    position: relative;
 }
 
 header nav ul {
@@ -28,6 +29,22 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+.login-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: white;
+    background-color: #007bff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
 }
 
 /* Hero Section */
