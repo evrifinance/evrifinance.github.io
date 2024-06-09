@@ -14,11 +14,6 @@ body {
         background-color: #343a40; /* Background color for dark mode */
     }
 
-    /* Ensure text under navigation bar has same background color as body */
-    .subheadline {
-        background-color: #343a40;
-    }
-
     /* Adjust card background color for dark mode */
     .card {
         background-color: #444;
@@ -56,15 +51,6 @@ nav {
     background-color: #0056b3;
 }
 
-/* Subheadline Styles */
-.subheadline {
-    padding: 1rem; /* Reduce padding for the subheadline */
-    text-align: center;
-    color: black; /* Text color for light mode */
-    height: calc(33.33vh - 6rem); /* Set height to be one-third of the screen height minus the header and card section heights */
-    overflow-y: auto; /* Allow vertical scrolling if content exceeds the height */
-}
-
 /* Card Section Styles */
 .card-section {
     display: flex;
@@ -86,52 +72,7 @@ nav {
 /* Media Query for Mobile */
 @media (max-width: 767px) {
     .card {
-        width: calc(100% - 2rem); /* Full width for mobile */
-        height: calc(50vh - 6rem); /* Set card height to be half of the screen height minus the header and subheadline heights */
-        margin: 1rem; /* Space between cards on mobile */
-    }
-}
-
-/* Media Query for Mobile */
-@media (max-width: 767px) {
-    body {
-        overflow-x: hidden; /* Prevent horizontal scrolling on mobile */
-        overflow-y: auto; /* Allow vertical scrolling on mobile */
-    }
-
-    .card {
         flex: 0 0 calc(100% - 2rem); /* Full width for mobile */
         margin: 1rem; /* Space between cards on mobile */
     }
-}
-
-/* Login Page Styles */
-.login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: inherit; /* Inherit background color from body */
-}
-
-.login-container h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.apple-btn {
-    background-color: black;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.apple-btn:hover {
-    background-color: #333;
 }
