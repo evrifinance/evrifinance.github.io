@@ -1,129 +1,46 @@
-/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
     padding: 0;
-    color: black; /* Default text color for light mode */
-    background-color: #f8f9fa; /* Default background color for light mode */
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white; /* Text color for dark mode */
-        background-color: #343a40; /* Background color for dark mode */
-    }
-
-    /* Adjust card background color for dark mode */
-    .card {
-        background-color: #252323; /* Darker gray background color */
-    }
+h1, h2 {
+    margin: 20px 0;
 }
 
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-    /* Adjust card background color for light mode */
-    .card {
-        background-color: #f5f1ed; /* Light gray background color */
-    }
+form {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
 }
 
-/* Header Styles */
-header {
-    background-color: #343a40;
-    padding: 0.5rem 1rem; /* Adjust padding to remove bottom padding */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+input {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.logo {
-    color: white;
-    margin: 0;
-}
-
-nav {
-    padding: 0.5rem 1rem; /* Padding for the navigation links */
-}
-
-.login-btn {
-    color: white;
-    background-color: #007bff;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.login-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Card Section Styles */
-.card-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 0 2.5%; /* Padding only on the edges of the screen */
-    margin-top: 2rem; /* Adjust margin as needed */
-}
-
-.card {
-    width: calc(30% - 1rem); /* Adjust width to take up about 30% of the screen */
-    height: calc(50vh - 6rem); /* Set card height to be half of the screen height minus the header and subheadline heights */
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    border-radius: 0.5rem; /* Add rounded border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-}
-
-/* Media Query for Mobile */
-@media (max-width: 767px) {
-    .card {
-        flex: 0 0 calc(100% - 2rem); /* Full width for mobile */
-        margin: 1rem; /* Space between cards on mobile */
-    }
-}
-
-/* Login Page Styles */
-.login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    background-color: inherit; /* Inherit background color from body */
-}
-
-.login-container h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.apple-btn {
-    background-color: black;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
+button {
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
     cursor: pointer;
 }
 
-.apple-btn:hover {
-    background-color: #333;
+button:hover {
+    background: #218838;
 }
 
-/* Apple Sign in button style */
-#appleid-signin {
-    display: inline-block;
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px; /* Adjust as needed */
+#error {
+    color: red;
+    margin-top: 10px;
 }
