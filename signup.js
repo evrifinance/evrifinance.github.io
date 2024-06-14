@@ -4,15 +4,26 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
     const errorDiv = document.getElementById('signup-error');
+    const successDiv = document.getElementById('signup-success');
+    const loadingDiv = document.getElementById('loading');
+
+    errorDiv.textContent = '';
+    successDiv.textContent = '';
+    loadingDiv.style.display = 'block';
+    console.log('Sign Up button clicked');
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            // Signed up
             console.log('User signed up:', userCredential.user);
-            window.location.href = 'index.html'; // Redirect to home or another page
+            loadingDiv.style.display = 'none';
+            successDiv.textContent = 'User signed up successfully!';
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000); // Redirect after 2 seconds
         })
         .catch((error) => {
             console.error('Error signing up:', error);
+            loadingDiv.style.display = 'none';
             errorDiv.textContent = error.message;
         });
 });
