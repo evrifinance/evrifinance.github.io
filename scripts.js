@@ -102,3 +102,18 @@ AppleID.auth.signIn().then(function (response) {
             console.error('Error checking user existence:', error);
         });
 });
+
+// Detect user's preferred color scheme and update the CSS variables
+function detectColorScheme() {
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (isDarkMode) {
+    document.documentElement.style.setProperty('--background-color-light', '#000000');
+    document.documentElement.style.setProperty('--background-color-dark', '#FFFFFF');
+    document.documentElement.style.setProperty('--text-color-light', '#FFFFFF');
+    document.documentElement.style.setProperty('--text-color-dark', '#000000');
+  }
+}
+
+// Call the function when the page loads
+window.onload = detectColorScheme;
+
