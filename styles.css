@@ -1,55 +1,53 @@
+:root {
+  --background-color-light: #FFFFFF; /* white */
+  --background-color-dark: #000000; /* black */
+  --text-color-light: #000000; /* black */
+  --text-color-dark: #FFFFFF; /* white */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1, h2 {
-    margin: 20px 0;
+header {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 1rem;
+  text-align: center;
 }
 
-form {
-    display: inline-block;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: #f9f9f9;
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-input {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #28a745;
-    color: white;
-    cursor: pointer;
+main {
+  padding: 2rem;
 }
 
-button:hover {
-    background: #218838;
+footer {
+  background-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 1rem;
 }
 
-.error {
-    color: red;
-    margin-top: 10px;
-}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
 
-.success {
-    color: green;
-    margin-top: 10px;
-}
-
-#loading {
-    margin-top: 20px;
+  header,
+  footer {
+    background-color: #555555;
+  }
 }
