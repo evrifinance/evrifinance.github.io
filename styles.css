@@ -6,10 +6,9 @@
 }
 
 body {
-  background-color: var(--background-color-light);
-  color: var(--text-color-light);
   margin: 0;
   font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents horizontal scroll bar */
 }
 
 header {
@@ -51,6 +50,23 @@ main {
 
 .container {
   padding: 25px;
+}
+
+/* Animation for the background waves */
+body {
+  background-image: url('wave.svg');
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  animation: waveAnimation 30s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
