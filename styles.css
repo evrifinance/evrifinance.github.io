@@ -16,12 +16,15 @@ header {
   background-color: #333333;
   color: #FFFFFF;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 nav ul li {
@@ -30,14 +33,11 @@ nav ul li {
 }
 
 main {
-  padding: 2rem;
+  padding: 25px;
 }
 
-footer {
-  background-color: #333333;
-  color: #FFFFFF;
-  text-align: center;
-  padding: 1rem;
+.container {
+  padding: 25px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,8 +46,7 @@ footer {
     color: var(--text-color-dark);
   }
 
-  header,
-  footer {
+  header {
     background-color: #555555;
   }
 }
