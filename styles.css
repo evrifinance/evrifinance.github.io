@@ -52,23 +52,6 @@ main {
   padding: 25px;
 }
 
-/* Animation for the background waves */
-body {
-  background-image: url('wave.svg');
-  background-repeat: repeat-x;
-  background-size: 100% auto;
-  animation: waveAnimation 30s linear infinite;
-}
-
-@keyframes waveAnimation {
-  0% {
-    background-position: 0 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--background-color-dark);
