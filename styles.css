@@ -49,9 +49,22 @@ main {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px; /* Padding between boxes */
+  height: calc(100vh - 75px); /* Full height minus header height and main padding */
   padding: 25px;
+  box-sizing: border-box;
 }
 
+.box {
+  background-color: blue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styling */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--background-color-dark);
