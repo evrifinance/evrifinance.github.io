@@ -45,7 +45,7 @@ nav ul li a:hover {
 }
 
 main {
-  padding: 25px 12.5px 50px 12.5px; /* Adjusted padding: 25px top, 12.5px sides, 50px bottom */
+  padding: 25px; /* Equal padding on all sides */
   box-sizing: border-box; /* Ensure padding is included in width and height */
 }
 
@@ -54,7 +54,7 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 25px; /* Padding between boxes */
-  height: calc(100vh - 75px - 75px); /* Full height minus header height and adjusted main padding */
+  height: calc(100vh - 75px - 50px); /* Full height minus header height and main padding */
   box-sizing: border-box;
 }
 
