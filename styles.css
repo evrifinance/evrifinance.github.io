@@ -14,7 +14,7 @@ body {
 header {
   background-color: #333333;
   color: #FFFFFF;
-  padding: 0.25rem 0.5rem; /* Adjusted padding */
+  padding: 0.25rem 1rem; /* Adjusted padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,8 @@ nav ul li a:hover {
 }
 
 main {
-  padding: 25px;
+  padding: 25px 12.5px 50px 12.5px; /* Adjusted padding: 25px top, 12.5px sides, 50px bottom */
+  box-sizing: border-box; /* Ensure padding is included in width and height */
 }
 
 .container {
@@ -53,8 +54,7 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 25px; /* Padding between boxes */
-  height: calc(100vh - 75px); /* Full height minus header height and main padding */
-  padding: 25px;
+  height: calc(100vh - 75px - 75px); /* Full height minus header height and adjusted main padding */
   box-sizing: border-box;
 }
 
