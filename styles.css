@@ -51,7 +51,7 @@ main {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr 3fr; /* New column layout */
+  grid-template-columns: 1.5fr 2.5fr 2.5fr; /* New column layout */
   grid-template-rows: repeat(2, 1fr); /* Two equal rows */
   gap: 25px; /* Padding between boxes */
   height: calc(100vh - 75px - 50px); /* Full height minus header height and main padding */
