@@ -3,6 +3,8 @@
   --background-color-dark: #000000; /* black */
   --text-color-light: #000000; /* black */
   --text-color-dark: #FFFFFF; /* white */
+  --primary-color: #007bff; /* blue */
+  --primary-color-dark: #0056b3; /* darker blue */
 }
 
 body {
@@ -14,7 +16,7 @@ body {
 header {
   background-color: #333333;
   color: #FFFFFF;
-  padding: 0.25rem 1rem; /* Adjusted padding */
+  padding: 0.125rem 1rem; /* Adjusted padding to half the height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,24 +26,26 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 nav ul li {
-  display: inline;
   margin-right: 1rem;
 }
 
-/* Styling for the login button */
 nav ul li a {
-  padding: 8px 16px;
-  background-color: #007bff; /* Blue color */
   color: #FFFFFF;
-  border-radius: 5px; /* Rounded corners */
   text-decoration: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* Pill shape */
+}
+
+nav ul li a.active {
+  background-color: var(--primary-color);
 }
 
 nav ul li a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: var(--primary-color-dark);
 }
 
 main {
@@ -54,7 +58,7 @@ main {
   grid-template-columns: 1.5fr 2.5fr 2.5fr; /* New column layout */
   grid-template-rows: repeat(2, 1fr); /* Two equal rows */
   gap: 25px; /* Padding between boxes */
-  height: calc(100vh - 75px - 50px); /* Full height minus header height and main padding */
+  height: calc(100vh - 37.5px - 50px); /* Full height minus new header height and main padding */
   box-sizing: border-box;
 }
 
@@ -64,23 +68,9 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* New styles for the big green box */
 .big-box {
   background-color: green;
   grid-column: 1 / 2; /* First column */
   grid-row: 1 / 3; /* Span two rows */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Dark mode styling */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-  }
-
-  header {
-    background-color: #555555;
-  }
-}
+  box-shadow: 0 4px 8px rgba(0,
