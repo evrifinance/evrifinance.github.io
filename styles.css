@@ -51,8 +51,8 @@ main {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 3fr 3fr; /* New column layout */
+  grid-template-rows: repeat(2, 1fr); /* Two equal rows */
   gap: 25px; /* Padding between boxes */
   height: calc(100vh - 75px - 50px); /* Full height minus header height and main padding */
   box-sizing: border-box;
@@ -67,8 +67,8 @@ main {
 /* New styles for the big green box */
 .big-box {
   background-color: green;
-  grid-column: 2 / 3; /* Span from the second to the third column */
-  grid-row: 1 / 3; /* Span from the first to the third row */
+  grid-column: 1 / 2; /* First column */
+  grid-row: 1 / 3; /* Span two rows */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
