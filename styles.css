@@ -18,7 +18,7 @@ body {
 header {
   background-color: #333333;
   color: #FFFFFF;
-  padding: 0.125rem 1rem; /* Adjusted padding to half the height */
+  padding: 0.25rem 1rem; /* Adjusted padding to half the height */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +78,7 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Align to top */
   align-items: center;
   padding: 20px;
   color: var(--text-color-light);
@@ -88,6 +88,8 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .form h3 {
