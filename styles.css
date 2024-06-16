@@ -64,6 +64,15 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* New styles for the big green box */
+.big-box {
+  background-color: green;
+  grid-column: 2 / 3; /* Span from the second to the third column */
+  grid-row: 1 / 3; /* Span from the first to the third row */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Dark mode styling */
 @media (prefers-color-scheme: dark) {
   body {
