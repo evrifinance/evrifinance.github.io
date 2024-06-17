@@ -16,7 +16,7 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
     errorDiv.textContent = '';
     successDiv.textContent = '';
     loadingDiv.style.display = 'block';
-    console.log('Sign Up button clicked');
+    console.log('Sign Up button clicked with email:', email);
 
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
