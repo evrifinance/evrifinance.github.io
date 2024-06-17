@@ -10,7 +10,7 @@ document.getElementById('signin-form').addEventListener('submit', function(e) {
     errorDiv.textContent = '';
     successDiv.textContent = '';
     loadingDiv.style.display = 'block';
-    console.log('Sign In button clicked');
+    console.log('Sign In button clicked with email:', email);
 
     firebase.auth().signInWithEmailAndPassword(email, password)
         .then((userCredential) => {
