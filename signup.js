@@ -3,9 +3,15 @@ document.getElementById('signup-form').addEventListener('submit', function(e) {
 
     const email = document.getElementById('signup-email').value;
     const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('signup-confirm-password').value;
     const errorDiv = document.getElementById('signup-error');
     const successDiv = document.getElementById('signup-success');
     const loadingDiv = document.getElementById('loading');
+
+    if (password !== confirmPassword) {
+        errorDiv.textContent = 'Passwords do not match';
+        return;
+    }
 
     errorDiv.textContent = '';
     successDiv.textContent = '';
