@@ -38,73 +38,66 @@ nav ul li {
 nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
-  padding: 0.5rem 0;
+  padding: 0.25rem
+  padding: 0.25rem 0.5rem; /* Adjusted padding */
+  border-radius: 5px;
 }
 
+nav ul li a:hover,
 nav ul li a.active {
-  text-decoration: underline;
+  background-color: #555555;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 3rem); /* Adjusted height to accommodate header */
-  background-color: var(--background-color-light);
-  transition: background-color 0.5s ease;
+  padding: 1rem;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive layout */
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
-  width: 95%; /* Adjusted width to occupy about 95% */
-  max-width: 1200px; /* Limit the max width */
 }
 
 .box {
-  background-color: var(--box-background-light);
+  background-color: var(--primary-color);
+  color: #FFFFFF;
   padding: 1rem;
-  border-radius: 8px;
+  flex: 1 1 calc(50% - 1rem); /* Responsive boxes */
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(50vh - 4rem); /* Adjusted height */
-  max-height: calc(50vh - 4rem); /* Adjusted height */
+  border-radius: 5px;
 }
 
 .big-box {
-  grid-column: span 2; /* Spans two columns */
+  flex: 1 1 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  main {
-    background-color: var(--background-color-dark);
-  }
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--box-background-light);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-  header {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-  }
-
-  nav ul li a {
-    color: var(--text-color-dark);
-  }
-
-  .box {
-    background-color: var(--box-background-dark);
-  }
+input[type="email"],
+input[type="password"],
+button {
+  padding: 0.5rem;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 button {
   background-color: var(--primary-color);
-  color: var(--text-color-dark);
-  border: none;
-  border-radius: 4px; /* Rounded corners */
-  padding: 0.5rem 1rem;
+  color: #FFFFFF;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
@@ -119,24 +112,39 @@ button:hover {
   color: green;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+#toggle-auth-forms {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
 }
 
-.form label {
-  margin-top: 0.5rem;
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  .form {
+    background-color: var(--box-background-dark);
+  }
+
+  .box {
+    background-color: #444444; /* Slightly lighter grey for dark mode */
+  }
 }
 
-.form input {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.25rem;
-}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+  }
 
-.form button {
-  margin-top: 1rem;
-  align-self: flex-start;
+  .form {
+    background-color: var(--box-background-light);
+  }
+
+  .box {
+    background-color: var(--primary-color);
+  }
 }
