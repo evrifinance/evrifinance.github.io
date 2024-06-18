@@ -3,10 +3,6 @@
   --background-color-dark: #000000; /* black */
   --text-color-light: #000000; /* black */
   --text-color-dark: #FFFFFF; /* white */
-  --primary-color: #007bff; /* blue */
-  --primary-color-dark: #0056b3; /* darker blue */
-  --box-background-light: #f0f0f0; /* light grey */
-  --box-background-dark: #2b2b2b; /* dark grey */
 }
 
 body {
@@ -18,7 +14,7 @@ body {
 header {
   background-color: #333333;
   color: #FFFFFF;
-  padding: 0.25rem 1rem; /* Adjusted padding to half the height */
+  padding: 0.25rem 1rem; /* Adjusted padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,123 +24,54 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
 }
 
 nav ul li {
+  display: inline;
   margin-right: 1rem;
 }
 
+/* Styling for the login button */
 nav ul li a {
+  padding: 8px 16px;
+  background-color: #007bff; /* Blue color */
   color: #FFFFFF;
+  border-radius: 5px; /* Rounded corners */
   text-decoration: none;
-  padding: 0.25rem
-  padding: 0.25rem 0.5rem; /* Adjusted padding */
-  border-radius: 5px;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #555555;
+nav ul li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 main {
-  padding: 1rem;
+  padding: 25px; /* Equal padding on all sides */
+  box-sizing: border-box; /* Ensure padding is included in width and height */
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 25px; /* Padding between boxes */
+  height: calc(100vh - 75px - 50px); /* Full height minus header height and main padding */
+  box-sizing: border-box;
 }
 
 .box {
-  background-color: var(--primary-color);
-  color: #FFFFFF;
-  padding: 1rem;
-  flex: 1 1 calc(50% - 1rem); /* Responsive boxes */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
+  background-color: blue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.big-box {
-  flex: 1 1 100%;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
-  max-width: 400px;
-  background-color: var(--box-background-light);
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-input[type="email"],
-input[type="password"],
-button {
-  padding: 0.5rem;
-  border: 1px solid #CCCCCC;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-button {
-  background-color: var(--primary-color);
-  color: #FFFFFF;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--primary-color-dark);
-}
-
-.error {
-  color: red;
-}
-
-.success {
-  color: green;
-}
-
-#toggle-auth-forms {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: none;
-  cursor: pointer;
-}
-
+/* Dark mode styling */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
   }
 
-  .form {
-    background-color: var(--box-background-dark);
-  }
-
-  .box {
-    background-color: #444444; /* Slightly lighter grey for dark mode */
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-  }
-
-  .form {
-    background-color: var(--box-background-light);
-  }
-
-  .box {
-    background-color: var(--primary-color);
+  header {
+    background-color: #555555;
   }
 }
