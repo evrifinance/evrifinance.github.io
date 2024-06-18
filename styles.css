@@ -18,7 +18,7 @@ body {
 header {
   background-color: #333333;
   color: #FFFFFF;
-  padding: 0.25rem 1rem; /* Adjusted padding to half the height */
+  padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
