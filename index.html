@@ -11,109 +11,19 @@
     <h2>Evri Finance</h2>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Dashboard</a></li>
-        <li><a href="#accounts">Accounts</a></li>
-        <li><a href="#budget">Budget</a></li>
-        <li><a href="#transactions">Transactions</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#settings">Settings</a></li>
+        <li><a href="signin.html">Login</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section class="container">
-      <div class="box big-box">
-        <div id="auth-forms">
-          <div id="loading" style="display: none;">Loading...</div>
-          <div id="sign-in-form" class="form">
-            <h3>Sign In</h3>
-            <form id="signin-form">
-              <label for="signin-email">Email:</label>
-              <input type="email" id="signin-email" name="email" required>
-              <label for="signin-password">Password:</label>
-              <input type="password" id="signin-password" name="password" required>
-              <button type="submit">Sign In</button>
-              <button id="google-signin" type="button">Sign In with Google</button>
-              <div id="signin-error" class="error"></div>
-              <div id="signin-success" class="success"></div>
-            </form>
-          </div>
-          <div id="sign-up-form" class="form" style="display:none;">
-            <h3>Sign Up</h3>
-            <form id="signup-form">
-              <label for="signup-email">Email:</label>
-              <input type="email" id="signup-email" name="email" required>
-              <label for="signup-password">Password:</label>
-              <input type="password" id="signup-password" name="password" required>
-              <label for="signup-confirm-password">Confirm Password:</label>
-              <input type="password" id="signup-confirm-password" name="confirm-password" required>
-              <button type="submit">Sign Up</button>
-              <button id="google-signup" type="button">Sign Up with Google</button>
-              <div id="signup-error" class="error"></div>
-              <div id="signup-success" class="success"></div>
-            </form>
-          </div>
-          <button id="toggle-auth-forms">Switch to Sign Up</button>
-        </div>
-      </div>
+      <div class="box big-box"></div> <!-- Moved the new box to the start -->
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
       <div class="box"></div>
     </section>
   </main>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
-  <script src="firebaseConfig.js"></script>
-  <script src="signin.js"></script>
-  <script src="signup.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (!firebase.apps.length) {
-        console.error('Firebase is not initialized.');
-      } else {
-        console.log('Firebase is initialized.');
-
-        document.getElementById('toggle-auth-forms').addEventListener('click', function() {
-          const signInForm = document.getElementById('sign-in-form');
-          const signUpForm = document.getElementById('sign-up-form');
-          const toggleButton = document.getElementById('toggle-auth-forms');
-
-          if (signInForm.style.display === 'none') {
-            signInForm.style.display = 'block';
-            signUpForm.style.display = 'none';
-            toggleButton.textContent = 'Switch to Sign Up';
-          } else {
-            signInForm.style.display = 'none';
-            signUpForm.style.display = 'block';
-            toggleButton.textContent = 'Switch to Sign In';
-          }
-        });
-
-        // Initialize Google Auth
-        var provider = new firebase.auth.GoogleAuthProvider();
-
-        // Google Sign-In
-        document.getElementById('google-signin').addEventListener('click', function() {
-          firebase.auth().signInWithPopup(provider).then((result) => {
-            console.log('User signed in with Google:', result.user);
-            window.location.href = 'index.html';
-          }).catch((error) => {
-            console.error('Error during Google sign-in:', error);
-          });
-        });
-
-        // Google Sign-Up
-        document.getElementById('google-signup').addEventListener('click', function() {
-          firebase.auth().signInWithPopup(provider).then((result) => {
-            console.log('User signed up with Google:', result.user);
-            window.location.href = 'index.html';
-          }).catch((error) => {
-            console.error('Error during Google sign-up:', error);
-          });
-        });
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
