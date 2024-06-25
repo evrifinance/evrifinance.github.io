@@ -1,55 +1,81 @@
+:root {
+  --background-color-light: #FFFFFF; /* white */
+  --background-color-dark: #000000; /* black */
+  --text-color-light: #000000; /* black */
+  --text-color-dark: #FFFFFF; /* white */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevents horizontal scroll bar */
 }
 
-h1, h2 {
-    margin: 20px 0;
+header {
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 0.5rem 1rem; /* Adjusted padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-form {
-    display: inline-block;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background: #f9f9f9;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-input {
-    display: block;
-    width: 200px;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background: #28a745;
-    color: white;
-    cursor: pointer;
+/* Styling for the login button */
+nav ul li a {
+  padding: 8px 16px;
+  background-color: #007bff; /* Blue color */
+  color: #FFFFFF;
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none;
 }
 
-button:hover {
-    background: #218838;
+nav ul li a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-.error {
-    color: red;
-    margin-top: 10px;
+main {
+  padding: 25px;
 }
 
-.success {
-    color: green;
-    margin-top: 10px;
+.container {
+  padding: 25px;
 }
 
-#loading {
-    margin-top: 20px;
+/* Animation for the background waves */
+body {
+  background-image: url('wave.svg');
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  animation: waveAnimation 30s linear infinite;
+}
+
+@keyframes waveAnimation {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+
+  header {
+    background-color: #555555;
+  }
 }
