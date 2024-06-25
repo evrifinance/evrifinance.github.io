@@ -1,5 +1,5 @@
 // Your web app's Firebase configuration
-var firebaseConfig = {
+export var firebaseConfig = {
   apiKey: "AIzaSyCPuzqqUiNi2ChlVJf6BRUo5VnLb8-LnY4",
   authDomain: "evrifinanceweb.firebaseapp.com",
   projectId: "evrifinanceweb",
