@@ -1,176 +1,55 @@
-:root {
-  --background-color-light: #FFFFFF; /* white */
-  --background-color-dark: #000000; /* black */
-  --text-color-light: #000000; /* black */
-  --text-color-dark: #FFFFFF; /* white */
-  --primary-color: #007bff; /* blue */
-  --primary-color-dark: #0056b3; /* darker blue */
-  --box-background-light: #f0f0f0; /* light grey */
-  --box-background-dark: #2b2b2b; /* dark grey */
-}
-
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Prevents horizontal scroll bar */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-  background-color: #333333;
-  color: #FFFFFF;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+h1, h2 {
+    margin: 20px 0;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+form {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #f9f9f9;
 }
 
-nav ul li {
-  margin-right: 1rem;
+input {
+    display: block;
+    width: 200px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-nav ul li a {
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px; /* Pill shape */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
 }
 
-nav ul li a.active {
-  background-color: var(--primary-color);
-}
-
-nav ul li a:hover {
-  background-color: var(--primary-color-dark);
-}
-
-main {
-  padding: 25px; /* Equal padding on all sides */
-  box-sizing: border-box; /* Ensure padding is included in width and height */
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1.5fr 2.5fr 2.5fr; /* New column layout */
-  grid-template-rows: repeat(2, 1fr); /* Two equal rows */
-  gap: 25px; /* Padding between boxes */
-  height: calc(100vh - 50px - 50px); /* Full height minus new header height and main padding */
-  box-sizing: border-box;
-}
-
-.box {
-  background-color: blue;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.big-box {
-  background-color: var(--box-background-light);
-  grid-column: 1 / 2; /* First column */
-  grid-row: 1 / 3; /* Span two rows */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align to top */
-  align-items: center;
-  padding: 20px;
-  color: var(--text-color-light);
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.form h3 {
-  margin: 0 0 10px 0;
-}
-
-.form label {
-  margin: 5px 0;
-}
-
-.form input {
-  margin: 5px 0 15px 0;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.form button {
-  padding: 10px;
-  background-color: var(--primary-color);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background-color: var(--primary-color-dark);
+button:hover {
+    background: #218838;
 }
 
 .error {
-  color: red;
+    color: red;
+    margin-top: 10px;
 }
 
 .success {
-  color: green;
+    color: green;
+    margin-top: 10px;
 }
 
-#toggle-auth-forms {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #007bff;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#toggle-auth-forms:hover {
-  background-color: #0056b3;
-}
-
-/* Dark mode styling */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-  }
-
-  header {
-    background-color: #555555;
-  }
-
-  nav ul li a {
-    color: var(--text-color-dark);
-  }
-
-  nav ul li a.active {
-    background-color: var(--primary-color);
-  }
-
-  nav ul li a:hover {
-    background-color: var(--primary-color-dark);
-  }
-
-  .big-box {
-    background-color: var(--box-background-dark);
-    color: var(--text-color-dark);
-  }
-
-  .form input {
-    border: 1px solid #666;
-  }
+#loading {
+    margin-top: 20px;
 }
