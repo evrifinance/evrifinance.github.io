@@ -13,8 +13,8 @@ body, html {
 @media (prefers-color-scheme: light) {
     /* Index Page Styles */
     .index-page {
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -25,7 +25,7 @@ body, html {
     }
 
     .index-page .coming-soon {
-        color: white;
+        color: black; /* Changed from white to black */
         font-size: 3rem;
         font-weight: bold;
         text-align: center;
@@ -40,7 +40,7 @@ body, html {
     }
 
     .index-page .links a {
-        color: white; /* Light mode links */
+        color: black; /* Changed from white to black */
         text-decoration: none;
         margin: 0 10px;
     }
@@ -60,7 +60,7 @@ body, html {
     }
 
     .privacy-policy-page h1 {
-        text-align: center;
+        text-align: center; /* Ensure center alignment in light mode */
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
         color: #0056b3; /* Dark blue */
@@ -98,6 +98,56 @@ body, html {
         font-size: 0.9rem;
         color: #888;
     }
+
+    /* Terms of Service Page Styles */
+    .terms-of-service-page {
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        line-height: 1.6;
+    }
+
+    .terms-of-service-page h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #0056b3; /* Dark blue */
+    }
+
+    .terms-of-service-page h2, 
+    .terms-of-service-page h3 {
+        color: #0056b3;
+        margin-top: 1.5rem;
+    }
+
+    .terms-of-service-page h4 {
+        color: #333;
+        margin-top: 1rem;
+    }
+
+    .terms-of-service-page p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .terms-of-service-page ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0; /* Remove default padding */
+    }
+
+    .terms-of-service-page ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .terms-of-service-page .version {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+    }
 }
 
 /* Dark mode styles */
@@ -116,7 +166,7 @@ body, html {
     }
 
     .index-page .coming-soon {
-        color: white;
+        color: white; /* Ensure visibility against dark background */
         font-size: 3rem;
         font-weight: bold;
         text-align: center;
@@ -157,6 +207,10 @@ body, html {
         color: #3aa0ff; /* Light blue color for headings in dark mode */
     }
 
+    .privacy-policy-page h1 {
+        text-align: center; /* Ensure center alignment in dark mode */
+    }
+
     .privacy-policy-page p {
         font-size: 1.1rem;
         margin-bottom: 1rem;
@@ -176,6 +230,27 @@ body, html {
         margin-top: 2rem;
         text-align: center;
         font-size: 0.9rem;
+        color: #bbb;
+    }
+
+    /* Terms of Service Page Styles */
+    .terms-of-service-page {
+        background-color: #121212;
+        color: white;
+        padding: 2rem;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        line-height: 1.6;
+    }
+
+    .terms-of-service-page h1, 
+    .terms-of-service-page h2, 
+    .terms-of-service-page h3, 
+    .terms-of-service-page h4 {
+        color: #3aa0ff; /* Light blue color for headings in dark mode */
+    }
+
+    .terms-of-service-page .version {
         color: #bbb;
     }
 }
@@ -204,86 +279,12 @@ body, html {
     .privacy-policy-page ul li {
         font-size: 1rem;
     }
-}
 
-/* Prevent text from overflowing horizontally */
-.privacy-policy-page p, 
-.privacy-policy-page ul li {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Terms of Service Page Styles */
-.terms-of-service-page {
-    background-color: white;
-    color: black;
-    padding: 2rem;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    line-height: 1.6;
-}
-
-.terms-of-service-page h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #0056b3; /* Dark blue */
-}
-
-.terms-of-service-page h2, 
-.terms-of-service-page h3 {
-    color: #0056b3;
-    margin-top: 1.5rem;
-}
-
-.terms-of-service-page h4 {
-    color: #333;
-    margin-top: 1rem;
-}
-
-.terms-of-service-page p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.terms-of-service-page ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 0; /* Remove default padding */
-}
-
-.terms-of-service-page ul li {
-    margin-bottom: 0.5rem;
-}
-
-.terms-of-service-page .version {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-/* Dark mode styles for Terms of Service Page */
-@media (prefers-color-scheme: dark) {
+    /* Terms of Service Page Responsive */
     .terms-of-service-page {
-        background-color: #121212;
-        color: white;
+        padding: 1rem;
     }
 
-    .terms-of-service-page h1, 
-    .terms-of-service-page h2, 
-    .terms-of-service-page h3, 
-    .terms-of-service-page h4 {
-        color: #3aa0ff; /* Light blue color for headings in dark mode */
-    }
-
-    .terms-of-service-page .version {
-        color: #bbb;
-    }
-}
-
-/* Responsive styles for Terms of Service Page */
-@media (max-width: 768px) {
     .terms-of-service-page h1 {
         font-size: 2rem;
     }
@@ -292,8 +293,13 @@ body, html {
     .terms-of-service-page ul li {
         font-size: 1rem;
     }
+}
 
-    .terms-of-service-page {
-        padding: 1rem;
-    }
+/* Prevent text from overflowing horizontally */
+.privacy-policy-page p, 
+.privacy-policy-page ul li,
+.terms-of-service-page p,
+.terms-of-service-page ul li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
