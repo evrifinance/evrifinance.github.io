@@ -1,4 +1,4 @@
-/* General styling for the page, default for light mode */
+/* General styling for the page */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,117 +7,155 @@ body, html {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Light mode styles */
-body, html {
+/* Light mode styles for index-page */
+.index-page {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.index-page .coming-soon {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.index-page .links {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.index-page .links a {
+    color: white; /* Light mode links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.index-page .links a:hover {
+    text-decoration: underline;
+}
+
+/* Privacy Policy Page Styles */
+.privacy-policy-page {
     background-color: white;
     color: black;
+    padding: 2rem;
 }
 
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    body, html {
-        background-color: black;
-        color: white;
-    }
-
-    .container {
-        background-color: #222; /* Darker background for dark mode */
-        color: white;
-        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    }
-
-    h1, h2, h3, h4 {
-        color: #3aa0ff; /* Light blue color for headings in dark mode */
-    }
-
-    .links a {
-        color: white;
-    }
-
-    .links a:hover {
-        text-decoration: underline;
-    }
-}
-
-/* Container to center content and provide padding */
-.container {
+.privacy-policy-page .container {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 1.5rem;
     background-color: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
-/* Headings styles for light mode */
-h1 {
+.privacy-policy-page h1 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #0056b3; /* Dark blue */
 }
 
-h2, h3 {
+.privacy-policy-page h2, .privacy-policy-page h3 {
     color: #0056b3;
     margin-top: 1.5rem;
 }
 
-h4 {
+.privacy-policy-page h4 {
     color: #333;
     margin-top: 1rem;
 }
 
-/* Paragraph styles */
-p {
+.privacy-policy-page p {
     line-height: 1.7;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
-ul {
+.privacy-policy-page ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
-ul li {
+.privacy-policy-page ul li {
     margin-bottom: 0.5rem;
 }
 
-/* Styling for the version note */
-.version {
+.privacy-policy-page .version {
     margin-top: 2rem;
     text-align: center;
     font-size: 0.9rem;
     color: #888;
 }
 
-/* Links */
-.links {
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-
-.links a {
-    color: black; /* Default for light mode */
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode for index-page */
+    .index-page {
+        background-color: black;
+        color: white;
     }
 
-    h1 {
+    .index-page .coming-soon {
+        color: white;
+    }
+
+    .index-page .links a {
+        color: white;
+    }
+
+    /* Dark mode for Privacy Policy Page */
+    .privacy-policy-page {
+        background-color: #121212;
+        color: white;
+    }
+
+    .privacy-policy-page .container {
+        background-color: #1e1e1e;
+        color: white;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .privacy-policy-page h1, 
+    .privacy-policy-page h2, 
+    .privacy-policy-page h3, 
+    .privacy-policy-page h4 {
+        color: #3aa0ff; /* Light blue color for headings in dark mode */
+    }
+
+    .privacy-policy-page .version {
+        color: #bbb;
+    }
+}
+
+/* Responsive styles for both pages */
+@media (max-width: 768px) {
+    /* Responsive styles for index-page */
+    .index-page .coming-soon {
         font-size: 2rem;
     }
 
-    p, ul li {
+    .index-page .links {
+        font-size: 0.9rem;
+    }
+
+    /* Responsive styles for Privacy Policy Page */
+    .privacy-policy-page .container {
+        padding: 1rem;
+    }
+
+    .privacy-policy-page h1 {
+        font-size: 2rem;
+    }
+
+    .privacy-policy-page p, 
+    .privacy-policy-page ul li {
         font-size: 1rem;
     }
 }
