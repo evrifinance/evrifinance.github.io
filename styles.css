@@ -1,125 +1,141 @@
-/* General styling for the page */
+/* General styling for all pages */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Light mode styles for index-page */
-.index-page {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.index-page .coming-soon {
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.index-page .links {
-    margin-top: 1rem;
-    font-size: 1rem;
-}
-
-.index-page .links a {
-    color: white; /* Light mode links */
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.index-page .links a:hover {
-    text-decoration: underline;
-}
-
-/* Privacy Policy Page Styles */
-.privacy-policy-page {
-    background-color: white;
-    color: black;
-    padding: 2rem;
-}
-
-.privacy-policy-page .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.privacy-policy-page h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #0056b3; /* Dark blue */
-}
-
-.privacy-policy-page h2, .privacy-policy-page h3 {
-    color: #0056b3;
-    margin-top: 1.5rem;
-}
-
-.privacy-policy-page h4 {
-    color: #333;
-    margin-top: 1rem;
-}
-
-.privacy-policy-page p {
-    line-height: 1.7;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.privacy-policy-page ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.privacy-policy-page ul li {
-    margin-bottom: 0.5rem;
-}
-
-.privacy-policy-page .version {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #888;
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    /* Dark mode for index-page */
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+    /* Index Page Styles */
     .index-page {
         background-color: black;
         color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
     }
 
     .index-page .coming-soon {
         color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0; /* Remove default margins */
+    }
+
+    .index-page .links {
+        margin-top: 1rem;
+        font-size: 1rem;
     }
 
     .index-page .links a {
-        color: white;
+        color: white; /* Light mode links */
+        text-decoration: none;
+        margin: 0 10px;
     }
 
-    /* Dark mode for Privacy Policy Page */
+    .index-page .links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Privacy Policy Page Styles */
+    .privacy-policy-page {
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .privacy-policy-page h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #0056b3; /* Dark blue */
+    }
+
+    .privacy-policy-page h2, 
+    .privacy-policy-page h3 {
+        color: #0056b3;
+        margin-top: 1.5rem;
+    }
+
+    .privacy-policy-page h4 {
+        color: #333;
+        margin-top: 1rem;
+    }
+
+    .privacy-policy-page p {
+        line-height: 1.7;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-policy-page ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0; /* Remove default padding */
+    }
+
+    .privacy-policy-page ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .privacy-policy-page .version {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+    }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    /* Index Page Styles */
+    .index-page {
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .index-page .coming-soon {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        margin: 0; /* Remove default margins */
+    }
+
+    .index-page .links {
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+
+    .index-page .links a {
+        color: white; /* Dark mode links */
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .index-page .links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Privacy Policy Page Styles */
     .privacy-policy-page {
         background-color: #121212;
         color: white;
-    }
-
-    .privacy-policy-page .container {
-        background-color: #1e1e1e;
-        color: white;
-        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .privacy-policy-page h1, 
@@ -129,14 +145,33 @@ body, html {
         color: #3aa0ff; /* Light blue color for headings in dark mode */
     }
 
+    .privacy-policy-page p {
+        line-height: 1.7;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-policy-page ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0; /* Remove default padding */
+    }
+
+    .privacy-policy-page ul li {
+        margin-bottom: 0.5rem;
+    }
+
     .privacy-policy-page .version {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
         color: #bbb;
     }
 }
 
 /* Responsive styles for both pages */
 @media (max-width: 768px) {
-    /* Responsive styles for index-page */
+    /* Index Page Responsive */
     .index-page .coming-soon {
         font-size: 2rem;
     }
@@ -145,11 +180,7 @@ body, html {
         font-size: 0.9rem;
     }
 
-    /* Responsive styles for Privacy Policy Page */
-    .privacy-policy-page .container {
-        padding: 1rem;
-    }
-
+    /* Privacy Policy Page Responsive */
     .privacy-policy-page h1 {
         font-size: 2rem;
     }
@@ -158,4 +189,15 @@ body, html {
     .privacy-policy-page ul li {
         font-size: 1rem;
     }
+
+    .privacy-policy-page {
+        padding: 1rem;
+    }
+}
+
+/* Prevent text from overflowing horizontally */
+.privacy-policy-page p, 
+.privacy-policy-page ul li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
