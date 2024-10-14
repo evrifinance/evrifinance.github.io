@@ -4,9 +4,35 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa; /* Light background color */
-    color: #333;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif; /* Apply custom font here */
+}
+
+.coming-soon {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.links {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
 }
 
 /* Container to center content and provide padding */
