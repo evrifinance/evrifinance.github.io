@@ -17,3 +17,18 @@ body, html {
     font-weight: bold;
     text-align: center;
 }
+
+.links {
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
