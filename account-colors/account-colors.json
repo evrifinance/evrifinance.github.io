@@ -1,9 +1,9 @@
 [
     { "accountName": "Evri Finance", "hexColor": "#000000" },
-    { "accountName": "Chase", "hexColor": "#0000FF" },
-    { "accountName": "Bank of America", "hexColor": "#FF0000" },
-    { "accountName": "Account 1", "hexColor": "#00FF00" },
-    { "accountName": "Account 2", "hexColor": "#FFA500" },
-    { "accountName": "Account 3", "hexColor": "#800080" },
-    { "accountName": "Account 4", "hexColor": "#855080" }
+    { "accountName": "Chase", "hexColor": "#275CB2" },
+    { "accountName": "Bank of America", "hexColor": "#B42B36" },
+    { "accountName": "Ally", "hexColor": "#65327C" },
+    { "accountName": "Huntington", "hexColor": "#5BA63C" },
+    { "accountName": "Discover", "hexColor": "#DC733C" },
+    { "accountName": "Chime", "hexColor": "#5EC47F" }
 ]
