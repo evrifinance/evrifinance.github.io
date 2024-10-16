@@ -1,9 +1,107 @@
 [
-    { "accountName": "Evri Finance", "hexColor": "#000000" },
-    { "accountName": "Chase", "hexColor": "#275CB2" },
-    { "accountName": "Bank of America", "hexColor": "#B42B36" },
-    { "accountName": "Ally", "hexColor": "#65327C" },
-    { "accountName": "Huntington", "hexColor": "#5BA63C" },
-    { "accountName": "Discover", "hexColor": "#DC733C" },
-    { "accountName": "Chime", "hexColor": "#5EC47F" }
+    {
+        "accountName": "Evri Finance",
+        "hexColor": "#000000",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fevri-finance.png?alt=media&token=<your-token>"
+    },
+    {
+        "accountName": "Chase",
+        "hexColor": "#275CB2",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fchase.png?alt=media&token=deda8cc1-0723-4153-bb0d-d6f533dd67ad"
+    },
+    {
+        "accountName": "Bank of America",
+        "hexColor": "#B42B36",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbank-of-america.png?alt=media&token=e92f8627-a1a2-4511-a83b-da764b00072e"
+    },
+    {
+        "accountName": "Wells Fargo",
+        "hexColor": "#C53532",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fwells-fargo.png?alt=media&token=4b0fbb6c-feba-4236-8254-9cbf1eb6d013"
+    },
+    {
+        "accountName": "Citibank",
+        "hexColor": "#335ADB",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fciti.png?alt=media&token=2542c8eb-aa81-4e8b-a959-b78355eb4f41"
+    },
+    {
+        "accountName": "US Bank",
+        "hexColor": "#FFFFFF",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fus-bank.png?alt=media&token=1ec67c36-8014-4791-827e-d9d5bbf920e5"
+    },
+    {
+        "accountName": "PNC Bank",
+        "hexColor": "#3965A2",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fpnc.png?alt=media&token=49a78d20-894a-4de3-b63f-f27b0b7c5ef9"
+    },
+    {
+        "accountName": "Truist Bank",
+        "hexColor": "#291A42",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Ftruist.png?alt=media&token=8505ec56-6280-4d7f-90b6-7be75f42fa28"
+    },
+    {
+        "accountName": "Capital One",
+        "hexColor": "#1C4873",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fcapital-one.png?alt=media&token=ed4cfe10-467f-4f5a-9efb-736c94fd11b0"
+    },
+    {
+        "accountName": "Goldman Sachs",
+        "hexColor": "#21243A",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fgoldman-sachs.png?alt=media&token=8c4e148d-751d-4b98-81aa-d6d70e74934f"
+    },
+    {
+        "accountName": "TD Bank",
+        "hexColor": "#3A8424",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Ftd-bank.png?alt=media&token=9403d41e-90eb-4484-9c32-b84acc418d25"
+    },
+    {
+        "accountName": "Charles Schwab",
+        "hexColor": "#4599D2",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fcharles-schwab.png?alt=media&token=1e7aeea8-a45b-42d9-bfb2-6802dbd0859c"
+    },
+    {
+        "accountName": "BNY Mellon",
+        "hexColor": "#1F2120",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbny-mellon.png?alt=media&token=fd012995-8a4d-4bda-bc4d-23dc36bf48af"
+    },
+    {
+        "accountName": "BMO",
+        "hexColor": "#3572B0",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbmo.png?alt=media&token=f620e54e-06f7-44cf-a5cd-6bd14058048d"
+    },
+    {
+        "accountName": "State Street Bank",
+        "hexColor": "#0619F5",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fstate-street.png?alt=media&token=971ea2ea-00bc-4da7-9ed1-f09caa5368bc"
+    },
+    {
+        "accountName": "Morgan Stanley",
+        "hexColor": "#0E2A4D",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fmorgan-stanley.png?alt=media&token=2761da8a-2681-414c-b3d6-b82e2891457f"
+    },
+    {
+        "accountName": "Citizens",
+        "hexColor": "#387F55",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fcitizens.png?alt=media&token=5944a38a-5c30-4213-8fcf-1bfb48213a2a"
+    },
+    {
+        "accountName": "Fifth Third Bank",
+        "hexColor": "#263F8F",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Ffifth-third.png?alt=media&token=4d81ee53-4ce1-44cf-bf2a-b7f00e590f58"
+    },
+    {
+        "accountName": "M&T Bank",
+        "hexColor": "#337658",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fmt-bank.png?alt=media&token=6949fccc-d6ee-4802-8363-23d23ee7f46f"
+    },
+    {
+        "accountName": "Ally",
+        "hexColor": "#65327C",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fally.png?alt=media&token=d6993a51-04ee-4150-8356-3988726afef1"
+    },
+    {
+        "accountName": "Huntington",
+        "hexColor": "#5BA63C",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fhuntington.png?alt=media&token=8dd2d8a1-d4f6-4b79-aa09-367b52ffac22"
+    }
 ]
