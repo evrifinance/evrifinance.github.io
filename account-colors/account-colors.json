@@ -1,7 +1,7 @@
 [
     {
         "accountName": "Evri Finance",
-        "hexColor": "#000000",
+        "hexColor": "#D0B8AC",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fevri-finance.png?alt=media&token=<your-token>"
     },
     {
@@ -63,7 +63,12 @@
         "accountName": "Huntington",
         "hexColor": "#5BA63C",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fhuntington.png?alt=media&token=8dd2d8a1-d4f6-4b79-aa09-367b52ffac22"
-    },    
+    },
+    {
+        "accountName": "BNY Mellon",
+        "hexColor": "#1F2120",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbny-mellon.png?alt=media&token=fd012995-8a4d-4bda-bc4d-23dc36bf48af"
+    },
     {
         "accountName": "State Street Bank",
         "hexColor": "#0619F5",
