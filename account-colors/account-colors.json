@@ -5,6 +5,11 @@
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fevri-finance.png?alt=media&token=ee83e87b-f2db-4258-b081-68a576826cc4"
     },
     {
+        "accountName": "Evri Finance 2",
+        "hexColor": "#C69C72",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fevri-finance-2.png?alt=media&token=918b7d61-0b4d-4a8c-aebc-fb04e3a7a73f"
+    },
+    {
         "accountName": "Chase",
         "hexColor": "#275CB2",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fchase.png?alt=media&token=deda8cc1-0723-4153-bb0d-d6f533dd67ad"
