@@ -63,5 +63,10 @@
         "accountName": "Huntington",
         "hexColor": "#5BA63C",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fhuntington.png?alt=media&token=8dd2d8a1-d4f6-4b79-aa09-367b52ffac22"
+    },    
+    {
+        "accountName": "State Street Bank",
+        "hexColor": "#0619F5",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fstate-street.png?alt=media&token=971ea2ea-00bc-4da7-9ed1-f09caa5368bc"
     }
 ]
