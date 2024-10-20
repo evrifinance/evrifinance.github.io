@@ -1,28 +1,8 @@
 [
     {
         "accountName": "Evri Finance",
-        "hexColor": "#C69C72",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fevri-finance-white.png?alt=media&token=8a4ec90f-997c-4b93-85d7-f7e31aa17e5f"
-    },
-    {
-        "accountName": "Evri Finance 2",
-        "hexColor": "#7F5539",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-4-bold.png?alt=media&token=6b5b9cde-5c27-4ab7-956d-09c41e88752d"
-    },
-    {
-        "accountName": "Evri Finance 3",
-        "hexColor": "#143109",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
-    },
-    {
-        "accountName": "Evri Finance 4",
-        "hexColor": "#AAAE7F",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
-    },
-    {
-        "accountName": "Evri Finance 5",
-        "hexColor": "#A6C48A",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
+        "hexColor": "#19535F",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fevri-finance-white.png?alt=media&token=e28f7929-8a4b-4eda-a844-a3dfae4f7e5a"
     },
     {
         "accountName": "Chase",
