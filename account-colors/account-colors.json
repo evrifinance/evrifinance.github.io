@@ -2,7 +2,27 @@
     {
         "accountName": "Evri Finance",
         "hexColor": "#C69C72",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fevri-finance-2.png?alt=media&token=918b7d61-0b4d-4a8c-aebc-fb04e3a7a73f"
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fevri-finance-white.png?alt=media&token=8a4ec90f-997c-4b93-85d7-f7e31aa17e5f"
+    },
+    {
+        "accountName": "Evri Finance 2",
+        "hexColor": "#7F5539",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-4-bold.png?alt=media&token=6b5b9cde-5c27-4ab7-956d-09c41e88752d"
+    },
+    {
+        "accountName": "Evri Finance 3",
+        "hexColor": "#143109",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
+    },
+    {
+        "accountName": "Evri Finance 4",
+        "hexColor": "#AAAE7F",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
+    },
+    {
+        "accountName": "Evri Finance 5",
+        "hexColor": "#A6C48A",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2Fef-3-extrabold.png?alt=media&token=109200e4-8ba3-47f2-b713-f611e54b5d4c"
     },
     {
         "accountName": "Chase",
@@ -13,6 +33,11 @@
         "accountName": "Bank of America",
         "hexColor": "#B42B36",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbank-of-america.png?alt=media&token=e92f8627-a1a2-4511-a83b-da764b00072e"
+    },
+        {
+        "accountName": "Wells Fargo",
+        "hexColor": "#C53532",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fwells-fargo.png?alt=media&token=4b0fbb6c-feba-4236-8254-9cbf1eb6d013"
     },
     {
         "accountName": "Citibank",
@@ -35,9 +60,44 @@
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Ftruist.png?alt=media&token=8505ec56-6280-4d7f-90b6-7be75f42fa28"
     },
     {
+        "accountName": "Capital One",
+        "hexColor": "#1C4873",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fcapital-one.png?alt=media&token=ed4cfe10-467f-4f5a-9efb-736c94fd11b0"
+    },
+    {
+        "accountName": "Goldman Sachs",
+        "hexColor": "#21243A",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fgoldman-sachs.png?alt=media&token=8c4e148d-751d-4b98-81aa-d6d70e74934f"
+    },
+    {
+        "accountName": "TD Bank",
+        "hexColor": "#3A8424",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Ftd-bank.png?alt=media&token=9403d41e-90eb-4484-9c32-b84acc418d25"
+    },
+    {
+        "accountName": "Charles Schwab",
+        "hexColor": "#4599D2",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fcharles-schwab.png?alt=media&token=1e7aeea8-a45b-42d9-bfb2-6802dbd0859c"
+    },
+    {
+        "accountName": "BNY Mellon",
+        "hexColor": "#1F2120",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbny-mellon.png?alt=media&token=fd012995-8a4d-4bda-bc4d-23dc36bf48af"
+    },
+    {
         "accountName": "BMO",
         "hexColor": "#3572B0",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbmo.png?alt=media&token=f620e54e-06f7-44cf-a5cd-6bd14058048d"
+    },
+    {
+        "accountName": "State Street Bank",
+        "hexColor": "#0619F5",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fstate-street.png?alt=media&token=971ea2ea-00bc-4da7-9ed1-f09caa5368bc"
+    },
+    {
+        "accountName": "Morgan Stanley",
+        "hexColor": "#0E2A4D",
+        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fmorgan-stanley.png?alt=media&token=2761da8a-2681-414c-b3d6-b82e2891457f"
     },
     {
         "accountName": "Citizens",
@@ -63,15 +123,5 @@
         "accountName": "Huntington",
         "hexColor": "#5BA63C",
         "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fhuntington.png?alt=media&token=8dd2d8a1-d4f6-4b79-aa09-367b52ffac22"
-    },
-    {
-        "accountName": "BNY Mellon",
-        "hexColor": "#1F2120",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fbny-mellon.png?alt=media&token=fd012995-8a4d-4bda-bc4d-23dc36bf48af"
-    },
-    {
-        "accountName": "State Street Bank",
-        "hexColor": "#0619F5",
-        "institutionLogo": "https://firebasestorage.googleapis.com/v0/b/evri-finance-ios.appspot.com/o/logos%2FlightMode%2Fstate-street.png?alt=media&token=971ea2ea-00bc-4da7-9ed1-f09caa5368bc"
     }
 ]
