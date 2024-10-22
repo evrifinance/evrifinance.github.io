@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 100%;
+    min-height: 100%; /* Changed from height: 100% for better responsiveness */
     font-family: 'SUSE', sans-serif;
     /* overflow: hidden; */ /* Removed to allow scrolling */
     box-sizing: border-box;
@@ -28,21 +28,37 @@ body, html {
     object-fit: cover; /* Ensures the video covers the entire background */
 }
 
+/* **Permanent White Color for Specific Elements** */
+.coming-soon,
+.company-name,
+.footer-links a {
+    color: white; /* Ensures these elements are always white */
+}
+
+.footer-links {
+    /* Removed color settings from media queries and set globally */
+    font-size: 1rem;
+    text-align: center;
+    padding: 20px 0; /* Simplified padding */
+    background-color: transparent;
+}
+
 /* Light mode styles */
 @media (prefers-color-scheme: light) {
     .index-page {
-        color: black;
+        color: black; /* This sets the default text color to black */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Changed from space-between */
+        justify-content: flex-start; /* Allows elements to stack naturally */
         align-items: center;
-        min-height: 100vh; /* Changed from height: 100vh */
+        min-height: 100vh; /* Allows the page to grow beyond viewport */
         width: 100vw;
         padding: 1rem;
         position: relative;
     }
 
     .coming-soon {
+        /* color: white; */ /* Already set globally */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -54,6 +70,7 @@ body, html {
     }
 
     .company-name {
+        /* color: white; */ /* Already set globally */
         font-size: 3.5rem;
         font-weight: 800;
         margin-bottom: 1rem;
@@ -80,6 +97,7 @@ body, html {
     .signup-section h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
+        color: black; /* Dynamic color in light mode */
     }
 
     .signup-section form {
@@ -120,15 +138,9 @@ body, html {
         color: green;
     }
 
-    .footer-links {
-        font-size: 1rem;
-        text-align: center;
-        padding: 20px 0; /* Simplified padding */
-        background-color: transparent;
-    }
-
+    /* **Footer Links Already Set to White Globally** */
     .footer-links a {
-        color: black;
+        /* color: black; */ /* Removed to keep them white */
         text-decoration: none;
         margin: 0 10px;
     }
@@ -141,18 +153,19 @@ body, html {
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     .index-page {
-        color: white;
+        color: white; /* This sets the default text color to white */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Changed from space-between */
+        justify-content: flex-start; /* Allows elements to stack naturally */
         align-items: center;
-        min-height: 100vh; /* Changed from height: 100vh */
+        min-height: 100vh; /* Allows the page to grow beyond viewport */
         width: 100vw;
         padding: 1rem;
         position: relative;
     }
 
     .coming-soon {
+        /* color: white; */ /* Already set globally */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -164,10 +177,11 @@ body, html {
     }
 
     .company-name {
+        /* color: white; */ /* Already set globally */
         font-size: 3.5rem;
         font-weight: 800;
         margin-bottom: 1rem;
-        color: white;
+        /* color: white; */ /* Already set globally */
     }
 
     .coming-date {
@@ -191,7 +205,7 @@ body, html {
     .signup-section h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: white;
+        color: white; /* Dynamic color in dark mode */
     }
 
     .signup-section form {
@@ -232,15 +246,9 @@ body, html {
         color: #4caf50;
     }
 
-    .footer-links {
-        font-size: 1rem;
-        text-align: center;
-        padding: 20px 0; /* Simplified padding */
-        background-color: transparent;
-    }
-
+    /* **Footer Links Already Set to White Globally** */
     .footer-links a {
-        color: white;
+        /* color: white; */ /* Already set globally */
         text-decoration: none;
         margin: 0 10px;
     }
