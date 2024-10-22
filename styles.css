@@ -121,10 +121,6 @@ body, html {
     }
 
     .footer-links {
-        position: fixed;
-        bottom: env(safe-area-inset-bottom, 10px);
-        left: 0;
-        right: 0;
         font-size: 1rem;
         text-align: center;
         padding-bottom: 20px; /* Added padding below */
