@@ -34,15 +34,15 @@
 
     <!-- Firebase Initialization and Form Handling -->
     <script>
-        // Replace these with your actual Firebase project configuration
+        // Correct Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyCuWkVNpemW2UP025s2GVoxCggQfSn7U-o",
-            authDomain: "evri-finance-ios.firebaseapp.com",
-            projectId: "evri-finance-ios",
-            storageBucket: "evri-finance-ios.appspot.com",
-            messagingSenderId: "990766521571",
-            appId: "1:990766521571:web:7f5a78664bd5d8db8c39d6",
-            measurementId: "G-GXHWFJJ665"
+            apiKey: "YOUR_API_KEY",
+            authDomain: "your-project-id.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project-id.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID",
+            measurementId: "YOUR_MEASUREMENT_ID"
         };
 
         // Initialize Firebase
@@ -52,7 +52,16 @@
         // Handle form submission
         document.getElementById('signup-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
+            const email = document.getElementById('email').value.trim();
+
+            // Basic email validation
+            if (!validateEmail(email)) {
+                document.getElementById('form-message').textContent = "Please enter a valid email address.";
+                document.getElementById('form-message').style.color = "red";
+                return;
+            }
+
+            console.log("Submitting email:", email);
 
             // Add email to Firestore
             db.collection('emails').add({
@@ -60,14 +69,23 @@
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
             .then(() => {
+                console.log("Email successfully added to Firestore.");
                 document.getElementById('form-message').textContent = "Thank you for subscribing!";
+                document.getElementById('form-message').style.color = "green";
                 document.getElementById('signup-form').reset();
             })
             .catch((error) => {
                 console.error("Error adding document: ", error);
                 document.getElementById('form-message').textContent = "An error occurred. Please try again.";
+                document.getElementById('form-message').style.color = "red";
             });
         });
+
+        // Email validation function
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i;
+            return re.test(String(email).toLowerCase());
+        }
     </script>
 </body>
 </html>
