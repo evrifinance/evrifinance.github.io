@@ -9,9 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 </head>
 <body class="index-page">
     <div class="coming-soon">
@@ -33,8 +30,14 @@
     </div>
 
     <!-- Firebase Initialization and Form Handling -->
-    <script>
-        // Correct Firebase configuration
+    <!-- Include Firebase SDKs -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+
+        // Your web app's Firebase configuration
+        // Replace the placeholders with your actual Firebase project configuration
         const firebaseConfig = {
             apiKey: "AIzaSyCuWkVNpemW2UP025s2GVoxCggQfSn7U-o",
             authDomain: "evri-finance-ios.firebaseapp.com",
@@ -46,45 +49,47 @@
         };
 
         // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
         // Handle form submission
-        document.getElementById('signup-form').addEventListener('submit', function(e) {
+        document.getElementById('signup-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             const email = document.getElementById('email').value.trim();
 
             // Basic email validation
             if (!validateEmail(email)) {
-                document.getElementById('form-message').textContent = "Please enter a valid email address.";
-                document.getElementById('form-message').style.color = "red";
+                displayMessage("Please enter a valid email address.", "red");
                 return;
             }
 
             console.log("Submitting email:", email);
 
-            // Add email to Firestore
-            db.collection('emails').add({
-                email: email,
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
-            })
-            .then(() => {
+            try {
+                await addDoc(collection(db, 'emails'), {
+                    email: email,
+                    timestamp: serverTimestamp()
+                });
                 console.log("Email successfully added to Firestore.");
-                document.getElementById('form-message').textContent = "Thank you for subscribing!";
-                document.getElementById('form-message').style.color = "green";
+                displayMessage("Thank you for subscribing!", "green");
                 document.getElementById('signup-form').reset();
-            })
-            .catch((error) => {
+            } catch (error) {
                 console.error("Error adding document: ", error);
-                document.getElementById('form-message').textContent = "An error occurred. Please try again.";
-                document.getElementById('form-message').style.color = "red";
-            });
+                displayMessage("An error occurred. Please try again.", "red");
+            }
         });
 
         // Email validation function
         function validateEmail(email) {
-            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i;
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(String(email).toLowerCase());
+        }
+
+        // Function to display messages to the user
+        function displayMessage(message, color) {
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = message;
+            formMessage.style.color = color;
         }
     </script>
 </body>
