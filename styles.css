@@ -30,9 +30,7 @@ body, html {
 
 /* Light mode styles */
 @media (prefers-color-scheme: light) {
-    /* Index Page Styles */
     .index-page {
-        /* Removed background-color to allow video background */
         color: black;
         display: flex;
         flex-direction: column;
@@ -51,6 +49,7 @@ body, html {
         font-size: 3rem;
         font-weight: bold;
         margin: 0;
+        padding-top: 30px; /* Added padding above */
         text-align: center;
     }
 
@@ -73,8 +72,9 @@ body, html {
         margin: 2rem 0;
         text-align: center;
         background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
-        padding: 1rem;
+        padding: 1.5rem 2rem; /* Increased padding for sides and top/bottom */
         border-radius: 8px;
+        max-width: 90%;
     }
 
     .signup-section h2 {
@@ -127,7 +127,7 @@ body, html {
         right: 0;
         font-size: 1rem;
         text-align: center;
-        padding-bottom: 1rem;
+        padding-bottom: 20px; /* Added padding below */
         background-color: transparent;
     }
 
@@ -140,72 +140,11 @@ body, html {
     .footer-links a:hover {
         text-decoration: underline;
     }
-
-    /* Privacy Policy and Terms of Service Page Styles */
-    .privacy-policy-page,
-    .terms-of-service-page {
-        background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
-        color: black;
-        padding: 2rem;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        line-height: 1.6;
-        border-radius: 8px;
-    }
-
-    .privacy-policy-page h1,
-    .terms-of-service-page h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #0056b3;
-    }
-
-    .privacy-policy-page h2,
-    .privacy-policy-page h3,
-    .terms-of-service-page h2,
-    .terms-of-service-page h3 {
-        color: #0056b3;
-        margin-top: 1.5rem;
-    }
-
-    .privacy-policy-page h4,
-    .terms-of-service-page h4 {
-        color: #333;
-        margin-top: 1rem;
-    }
-
-    .privacy-policy-page p,
-    .terms-of-service-page p {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-
-    .privacy-policy-page ul,
-    .terms-of-service-page ul {
-        list-style-type: disc;
-        margin-left: 20px;
-        padding-left: 0;
-    }
-
-    .privacy-policy-page ul li,
-    .terms-of-service-page ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .privacy-policy-page .version,
-    .terms-of-service-page .version {
-        margin-top: 2rem;
-        text-align: center;
-        font-size: 0.9rem;
-        color: #888;
-    }
 }
 
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
     .index-page {
-        /* Removed background-color to allow video background */
         color: white;
         display: flex;
         flex-direction: column;
@@ -224,6 +163,7 @@ body, html {
         font-size: 3rem;
         font-weight: bold;
         margin: 0;
+        padding-top: 30px; /* Added padding above */
         text-align: center;
     }
 
@@ -247,8 +187,9 @@ body, html {
         margin: 2rem 0;
         text-align: center;
         background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for better readability */
-        padding: 1rem;
+        padding: 1.5rem 2rem; /* Increased padding for sides and top/bottom */
         border-radius: 8px;
+        max-width: 90%;
     }
 
     .signup-section h2 {
@@ -302,7 +243,7 @@ body, html {
         right: 0;
         font-size: 1rem;
         text-align: center;
-        padding-bottom: 1rem;
+        padding-bottom: 20px; /* Added padding below */
         background-color: transparent;
     }
 
@@ -315,91 +256,4 @@ body, html {
     .footer-links a:hover {
         text-decoration: underline;
     }
-
-    .privacy-policy-page,
-    .terms-of-service-page {
-        background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent background */
-        color: white;
-        padding: 2rem;
-        max-width: 100%;
-        overflow-wrap: break-word;
-        line-height: 1.6;
-        border-radius: 8px;
-    }
-
-    .privacy-policy-page h1,
-    .terms-of-service-page h1 {
-        text-align: center;
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #3aa0ff;
-    }
-
-    .privacy-policy-page h2,
-    .privacy-policy-page h3,
-    .terms-of-service-page h2,
-    .terms-of-service-page h3,
-    .privacy-policy-page h4,
-    .terms-of-service-page h4 {
-        color: #3aa0ff;
-    }
-
-    .privacy-policy-page .version,
-    .terms-of-service-page .version {
-        color: #bbb;
-    }
-}
-
-/* Responsive styles for both pages */
-@media (max-width: 768px) {
-    .index-page .coming-soon {
-        font-size: 2rem;
-    }
-
-    .index-page .company-name {
-        font-size: 2.5rem;
-    }
-
-    .signup-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .signup-section form {
-        max-width: 300px;
-    }
-
-    .signup-section input[type="email"],
-    .signup-section button {
-        font-size: 0.9rem;
-    }
-
-    .footer-links {
-        font-size: 0.9rem;
-    }
-
-    .privacy-policy-page,
-    .terms-of-service-page {
-        padding: 1rem;
-    }
-
-    .privacy-policy-page h1,
-    .terms-of-service-page h1 {
-        font-size: 2rem;
-    }
-
-    .privacy-policy-page p,
-    .privacy-policy-page ul li,
-    .terms-of-service-page p,
-    .terms-of-service-page ul li {
-        font-size: 1rem;
-    }
-}
-
-/* Prevent text from overflowing horizontally */
-.privacy-policy-page p, 
-.privacy-policy-page ul li,
-.terms-of-service-page p,
-.terms-of-service-page ul li {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
 }
