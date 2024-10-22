@@ -1,90 +1,338 @@
-/* Existing styles remain unchanged */
-
-/* Sign Up Section Styles */
-.signup-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.signup-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.signup-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-}
-
-.signup-section input[type="email"] {
-    padding: 0.8rem;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.signup-section button {
-    padding: 0.8rem 1.5rem;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.signup-section button:hover {
-    background-color: #003f7f;
-}
-
-#form-message {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: green;
-}
-
-/* Adjustments for no scrolling and fixed footer */
-body.index-page {
-    font-family: 'SUSE', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+/* General styling for all pages */
+body, html {
     margin: 0;
-    overflow: hidden;
-    text-align: center;
-    padding: 1rem;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'SUSE', sans-serif;
+    overflow: hidden; /* Prevent both horizontal and vertical scrolling globally */
+    box-sizing: border-box;
 }
 
-.coming-soon, .signup-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+    /* Index Page Styles */
+    .index-page {
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .coming-soon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+    }
+
+    .company-name {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+
+    .coming-date {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    /* Sign Up Section Styles */
+    .signup-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .signup-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .signup-section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .signup-section input[type="email"] {
+        padding: 0.8rem;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .signup-section button {
+        padding: 0.8rem 1.5rem;
+        background-color: #0056b3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .signup-section button:hover {
+        background-color: #003f7f;
+    }
+
+    #form-message {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: green;
+    }
+
+    .footer-links {
+        position: fixed;
+        bottom: env(safe-area-inset-bottom, 10px);
+        left: 0;
+        right: 0;
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        background-color: transparent;
+    }
+
+    .footer-links a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* Privacy Policy and Terms of Service Page Styles */
+    .privacy-policy-page,
+    .terms-of-service-page {
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        line-height: 1.6;
+    }
+
+    .privacy-policy-page h1,
+    .terms-of-service-page h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #0056b3;
+    }
+
+    .privacy-policy-page h2,
+    .privacy-policy-page h3,
+    .terms-of-service-page h2,
+    .terms-of-service-page h3 {
+        color: #0056b3;
+        margin-top: 1.5rem;
+    }
+
+    .privacy-policy-page h4,
+    .terms-of-service-page h4 {
+        color: #333;
+        margin-top: 1rem;
+    }
+
+    .privacy-policy-page p,
+    .terms-of-service-page p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .privacy-policy-page ul,
+    .terms-of-service-page ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        padding-left: 0;
+    }
+
+    .privacy-policy-page ul li,
+    .terms-of-service-page ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .privacy-policy-page .version,
+    .terms-of-service-page .version {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+    }
 }
 
-.footer-links {
-    position: fixed;
-    bottom: env(safe-area-inset-bottom, 10px);
-    left: 0;
-    right: 0;
-    font-size: 1rem;
-    text-align: center;
-    padding-bottom: 1rem;
-    background-color: transparent;
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    .index-page {
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .coming-soon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+    }
+
+    .company-name {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .coming-date {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+
+    /* Sign Up Section Styles */
+    .signup-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .signup-section h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+
+    .signup-section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .signup-section input[type="email"] {
+        padding: 0.8rem;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .signup-section button {
+        padding: 0.8rem 1.5rem;
+        background-color: #3aa0ff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .signup-section button:hover {
+        background-color: #1e7fd4;
+    }
+
+    #form-message {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #4caf50;
+    }
+
+    .footer-links {
+        position: fixed;
+        bottom: env(safe-area-inset-bottom, 10px);
+        left: 0;
+        right: 0;
+        font-size: 1rem;
+        text-align: center;
+        padding-bottom: 1rem;
+        background-color: transparent;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    .privacy-policy-page,
+    .terms-of-service-page {
+        background-color: #121212;
+        color: white;
+        padding: 2rem;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        line-height: 1.6;
+    }
+
+    .privacy-policy-page h1,
+    .terms-of-service-page h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: #3aa0ff;
+    }
+
+    .privacy-policy-page h2,
+    .privacy-policy-page h3,
+    .terms-of-service-page h2,
+    .terms-of-service-page h3,
+    .privacy-policy-page h4,
+    .terms-of-service-page h4 {
+        color: #3aa0ff;
+    }
+
+    .privacy-policy-page .version,
+    .terms-of-service-page .version {
+        color: #bbb;
+    }
 }
 
+/* Responsive styles for both pages */
 @media (max-width: 768px) {
+    .index-page .coming-soon {
+        font-size: 2rem;
+    }
+
+    .index-page .company-name {
+        font-size: 2.5rem;
+    }
+
     .signup-section h2 {
         font-size: 1.5rem;
     }
@@ -97,4 +345,34 @@ body.index-page {
     .signup-section button {
         font-size: 0.9rem;
     }
+
+    .footer-links {
+        font-size: 0.9rem;
+    }
+
+    .privacy-policy-page,
+    .terms-of-service-page {
+        padding: 1rem;
+    }
+
+    .privacy-policy-page h1,
+    .terms-of-service-page h1 {
+        font-size: 2rem;
+    }
+
+    .privacy-policy-page p,
+    .privacy-policy-page ul li,
+    .terms-of-service-page p,
+    .terms-of-service-page ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Prevent text from overflowing horizontally */
+.privacy-policy-page p, 
+.privacy-policy-page ul li,
+.terms-of-service-page p,
+.terms-of-service-page ul li {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
