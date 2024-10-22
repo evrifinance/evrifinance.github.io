@@ -3,9 +3,9 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     font-family: 'SUSE', sans-serif;
-    overflow: hidden; /* Prevent both horizontal and vertical scrolling globally */
+    /* overflow: hidden; */ /* Removed to allow scrolling */
     box-sizing: border-box;
 }
 
@@ -34,9 +34,9 @@ body, html {
         color: black;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start; /* Changed from space-between */
         align-items: center;
-        height: 100vh;
+        min-height: 100vh; /* Changed from height: 100vh */
         width: 100vw;
         padding: 1rem;
         position: relative;
@@ -123,7 +123,7 @@ body, html {
     .footer-links {
         font-size: 1rem;
         text-align: center;
-        padding-bottom: 20px; /* Added padding below */
+        padding: 20px 0; /* Simplified padding */
         background-color: transparent;
     }
 
@@ -144,9 +144,9 @@ body, html {
         color: white;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start; /* Changed from space-between */
         align-items: center;
-        height: 100vh;
+        min-height: 100vh; /* Changed from height: 100vh */
         width: 100vw;
         padding: 1rem;
         position: relative;
@@ -233,13 +233,9 @@ body, html {
     }
 
     .footer-links {
-        position: fixed;
-        bottom: env(safe-area-inset-bottom, 10px);
-        left: 0;
-        right: 0;
         font-size: 1rem;
         text-align: center;
-        padding-bottom: 20px; /* Added padding below */
+        padding: 20px 0; /* Simplified padding */
         background-color: transparent;
     }
 
@@ -251,5 +247,52 @@ body, html {
 
     .footer-links a:hover {
         text-decoration: underline;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* Adjust footer-links positioning */
+    .footer-links {
+        position: static; /* Ensures footer is below signup section */
+        padding: 15px 0;
+    }
+
+    /* Adjustments for other elements to fit mobile screens */
+    .coming-soon {
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    .company-name {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .coming-date {
+        font-size: 2rem;
+    }
+
+    .signup-section {
+        padding: 1rem;
+        max-width: 95%;
+    }
+
+    .signup-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .signup-section input[type="email"] {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    .signup-section button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        padding: 15px 0;
     }
 }
