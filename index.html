@@ -9,14 +9,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 </head>
 <body class="index-page">
     <div class="coming-soon">
         <div class="company-name">Evri Finance</div>
         <div class="coming-date">Coming Early 2025</div>
     </div>
+
+    <div class="signup-section">
+        <h2>Sign Up for Updates</h2>
+        <form id="signup-form">
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+            <p id="form-message"></p>
+        </form>
+    </div>
+
     <div class="footer-links">
         <a href="PrivacyPolicy.html">Privacy Policy</a> | <a href="TermsOfService.html">Terms of Service</a>
     </div>
+
+    <!-- Firebase Initialization and Form Handling -->
+    <script>
+        // TODO: Replace the following with your app's Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCuWkVNpemW2UP025s2GVoxCggQfSn7U-o",
+            authDomain: "evri-finance-ios.firebaseapp.com",
+            projectId: "evri-finance-ios",
+            storageBucket: "evri-finance-ios.appspot.com",
+            messagingSenderId: "990766521571",
+            appId: "1:990766521571:web:7f5a78664bd5d8db8c39d6",
+            measurementId: "G-GXHWFJJ665"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Handle form submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+
+            // Add email to Firestore
+            db.collection('emails').add({
+                email: email,
+                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            })
+            .then(() => {
+                document.getElementById('form-message').textContent = "Thank you for subscribing!";
+                document.getElementById('signup-form').reset();
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+                document.getElementById('form-message').textContent = "An error occurred. Please try again.";
+            });
+        });
+    </script>
 </body>
 </html>
